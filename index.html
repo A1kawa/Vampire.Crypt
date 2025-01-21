@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Eye Cult exp#01</title>
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap">
+</head>
+<body>
+    <div id="img">
+        <img id="landimg" src="skull.png">
+    </div>
+
+    <!-- Fundo escuro -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Popup de combate -->
+    <div class="popup" id="popup">
+        <div class="fechar" id="GameOver" onclick="hidePopup()" onmouseenter="HoverInClose()" onmouseleave="HoverOutClose()">
+            Termine o combate para continuar
+        </div>
+        <iframe id="popupIframe" src=""></iframe>
+    </div>
+
+    <div class="body">
+        <div id="conteudo">
+            <p id="txt">
+                Diga seu nome, aventureiro, e determine suas caracteristicas: <br><br>
+                <input id="NameInput" type="text" placeholder="Seu nome aqui."><br>
+            </p>
+
+                <div class="Char">
+                    Seus Pontos de Habilidade:
+                    <div class="Char" id="Hplayer"><img id="HabDice" src="dados/1.png" class="DiceChar">+ 6 = 
+                        <div class="rolls" id="roll01" onclick="RollDiceChar(1)">Rolar</div>
+                    </div>
+                </div>
+                <div class="Char">
+                    Seus Pontos de Energia:
+                    <div class="Char" id="Eplayer"><img id="EneDice01" src="dados/1.png" class="DiceChar">+<img id="EneDice02" src="dados/1.png" class="DiceChar">+ 12 = 
+                        <div class="rolls" id="roll02" onclick="RollDiceChar(2)">Rolar</div>
+                    </div>
+                </div>
+                <div class="Char">
+                    Seus Pontos de Sorte:
+                    <div class="Char" id="Splayer"><img id="SorDice" src="dados/1.png" class="DiceChar">+ 6 = 
+                        <div class="rolls" id="roll03" onclick="RollDiceChar(3)">Rolar</div>
+                    </div>
+                </div>
+                <div class="Char">
+                    Seus Pontos de Fé:
+                    <div class="Char" id="Fplayer"><img id="FeDice" src="dados/1.png" class="DiceChar">+ 3 = 
+                        <div class="rolls" id="roll04" onclick="RollDiceChar(4)">Rolar</div>
+                    </div>
+                </div>
+        </div>
+        <div class="ButtonColumn">
+            <div id="button1" class="AllButtons" onclick="Continua01()">continuar</div>
+            <div id="button2" class="AllButtons" onclick="Continua02()">voltar</div>
+            <div id="button3" class="AllButtons" onclick="Continua03()">entrar</div>
+            <div id="button4" class="AllButtons" onclick="Continua04()">voltar</div>
+            <div id="button5" class="AllButtons" onclick="Continua05()">continuar</div>
+            <div id="button6" class="AllButtons" onclick="Continua06()">voltar</div>
+        </div>
+    </div>
+    <div id="folha"><p id="FolhaContent"></p></div>
+    <div id="DadoTeste"></div>
+
+    <script src="pages.js"></script>
+    <script src="cases.js"></script>
+    <script src="functions.js"></script>
+
+</body>
+</html>
