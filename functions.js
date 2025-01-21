@@ -134,7 +134,7 @@ function Continua01() {
         document.getElementById("conteudo").innerHTML = `<p id="txt"></p>`
         txtp = document.getElementById("txt")
         attChar()
-        pagNmb = 98 //326
+        pagNmb = 1 //326
         txtp.innerHTML = 
         `${pagTxt[pagNmb]}<br>
         ${pagNmb}`
